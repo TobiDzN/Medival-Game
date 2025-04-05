@@ -25,23 +25,63 @@ public class PlayerMove : MonoBehaviour
     private Animator animator; // Reference to the Animator component
 
     private bool isJumping = false;  // Flag to check if we are jumping
-    bool isMoving = false;  
+    bool isMoving = false;
+
+    public GameObject[] Characters;
+    public bool[] CharacterSelection;
+
+    private bool CharacterSelected;
 
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
-        animator = gameObject.GetComponentInChildren<Animator>(); // Get the Animator from the child
+        //animator = gameObject.GetComponentInChildren<Animator>(); // Get the Animator from the child
         currentSpeed = 0f; // Start with zero speed
     }
 
-    IEnumerator attackDelay(int sec)
+    IEnumerator rootDelay(int sec)
     {
+        animator.applyRootMotion = true;
         yield return new WaitForSeconds(sec);
-        
+        animator.applyRootMotion = false;
+        Characters[2].transform.localPosition = Vector3.zero;
+        Characters[2].transform.localRotation = Quaternion.identity;
     }
 
     void Update()
     {
+        //Handle The Selection Of characters
+        if (CharacterSelection[0] == true)
+        {
+            //Disable Everyone But Mage
+            CharacterSelection[1] = false;
+            CharacterSelection[2] = false;
+            
+        }
+        else if (CharacterSelection[1] == true)
+        {
+            //Disable Everyone But Knight
+            CharacterSelection[0] = false;
+            CharacterSelection[2] = false;
+        }
+        else if (CharacterSelection[2] == true)
+        {
+            //Disable Everyone But Brute
+            CharacterSelection[1] = false;
+            CharacterSelection[0] = false;
+        }
+
+        //Handle The Characters Gameobjects
+        int i = 0;
+        foreach (GameObject Character in Characters)
+        {
+            Character.SetActive(CharacterSelection[i]);
+            i++;
+        }
+
+        animator = gameObject.GetComponentInChildren<Animator>(); // Get the Animator from the child
+        CharacterSelected = CharacterSelection[0] || CharacterSelection[1] || CharacterSelection[2];
+
         // Ground check
         groundedPlayer = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -77,6 +117,16 @@ public class PlayerMove : MonoBehaviour
             
         }
 
+        //Cast Special Ability
+        if(Input.GetMouseButtonDown(1))
+        {
+            animator.SetTrigger("Cast");
+            if (Characters[2].active == true)
+            {
+                StartCoroutine(rootDelay(2));
+            }
+        }
+
         // Sprint Logic
         if(Input.GetKeyDown(KeyCode.LeftShift)&&isMoving)
         {
@@ -86,6 +136,9 @@ public class PlayerMove : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.LeftShift)||!isMoving)
         {
+            if (CharacterSelected != true)
+                return;
+
             playerSpeed = 6.0f;
             animator.SetBool("Running", false);
         }

@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|d:\\projects\\unityfinishedsmallgames\\game #2\\medival-game\\medival game\\assets\\scripts\\terraintexturegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\terraintexturegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|d:\\projects\\unityfinishedsmallgames\\game #2\\medival-game\\medival game\\assets\\scripts\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\terraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\assets\\scripts\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A97B5EB-81D0-9129-842C-88DD870B0006}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TerrainTextureGenerator.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\TerrainTextureGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TerrainTextureGenerator.cs",
+              "ToolTip": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\TerrainTextureGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TerrainTextureGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T16:15:25.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TerrainGenerator.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\TerrainGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TerrainGenerator.cs",
+              "ToolTip": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\TerrainGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TerrainGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T15:33:43.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMove.cs",
+              "DocumentMoniker": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\PlayerMove.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMove.cs",
+              "ToolTip": "D:\\Projects\\UnityFinishedSmallGames\\Game #2\\Medival-Game\\Medival Game\\Assets\\Scripts\\PlayerMove.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMove.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC8AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T14:32:20.58Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

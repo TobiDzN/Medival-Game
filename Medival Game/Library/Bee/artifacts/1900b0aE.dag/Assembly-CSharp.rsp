@@ -421,6 +421,8 @@
 "Assets/FantasyEnvironments/Environments/Town/Scripts/Door.cs"
 "Assets/Scripts/CameraControl.cs"
 "Assets/Scripts/PlayerMove.cs"
+"Assets/Scripts/TerrainGenerator.cs"
+"Assets/Scripts/TerrainTextureGenerator.cs"
 -langversion:9.0
 
 /deterministic

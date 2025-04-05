@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collide
+  - Brute
+  - Mage
+  - Knight
   layers:
   - Default
   - TransparentFX

@@ -85,6 +85,8 @@
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
+    <Compile Include="Assets\Scripts\TerrainGenerator.cs" />
+    <Compile Include="Assets\Scripts\TerrainTextureGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\README.txt" />
