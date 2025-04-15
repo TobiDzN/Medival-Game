@@ -13,10 +13,10 @@ public class TerrainTextureGenerator : MonoBehaviour
     void Update()
     {
         // Update the terrain textures continuously (every frame)
-        GenerateTerrainTextures();
+        //GenerateTerrainTextures();
     }
 
-    void GenerateTerrainTextures()
+    public void GenerateTerrainTextures()
     {
         TerrainData terrainData = terrain.terrainData;
 
@@ -31,7 +31,14 @@ public class TerrainTextureGenerator : MonoBehaviour
             for (int y = 0; y < terrainData.alphamapHeight; y++)
             {
                 // Get the normalized height of the terrain at this point
-                float height = terrainData.GetHeight(x, y) / terrainData.size.y;
+                float normX = (float)x / (terrainData.alphamapWidth - 1);
+                float normY = (float)y / (terrainData.alphamapHeight - 1);
+
+                int heightX = Mathf.RoundToInt(normX * (terrainData.heightmapResolution - 1));
+                int heightY = Mathf.RoundToInt(normY * (terrainData.heightmapResolution - 1));
+
+                float height = terrainData.GetHeight(heightX, heightY) / terrainData.size.y;
+
 
                 // Road generation based on low terrain heights
                 if (height < 0.3f)
@@ -76,4 +83,16 @@ public class TerrainTextureGenerator : MonoBehaviour
         // For example, creating a simple road in the middle of the terrain
         return Mathf.Abs(xCoord - terrainData.size.x * 0.5f) < roadWidth;
     }
+
+    void OnEnable()
+    {
+        TerrainGenerator.OnTerrainUpdated += GenerateTerrainTextures;
+    }
+
+    void OnDisable()
+    {
+        TerrainGenerator.OnTerrainUpdated -= GenerateTerrainTextures;
+    }
+
+
 }

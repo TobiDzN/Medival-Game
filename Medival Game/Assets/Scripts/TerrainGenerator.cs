@@ -4,17 +4,24 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
     public int depth = 20;
-
     public int width = 256;
     public int height = 256;
-
-
     public float scale = 20f;
+
+    public TerrainTextureGenerator textureGen;
+
+    public delegate void TerrainUpdated();
+    public static event TerrainUpdated OnTerrainUpdated;
 
     private void Update()
     {
-        Terrain terrain = GetComponent<Terrain>();
-        terrain.terrainData = GenerateTerrain(terrain.terrainData);
+        if (Input.GetKeyUp(KeyCode.F5))
+        {
+            Terrain terrain = GetComponent<Terrain>();
+            terrain.terrainData = GenerateTerrain(terrain.terrainData);
+            textureGen.GenerateTerrainTextures();
+            OnTerrainUpdated?.Invoke();
+        }
     }
 
     TerrainData GenerateTerrain(TerrainData terrainData)
@@ -22,7 +29,7 @@ public class TerrainGenerator : MonoBehaviour
         terrainData.heightmapResolution = width + 1;
         terrainData.size = new Vector3(width,depth,height);
         terrainData.SetHeights(0, 0, GenerateHeights());
-
+        OnTerrainUpdated?.Invoke();
         return terrainData;
     }
 

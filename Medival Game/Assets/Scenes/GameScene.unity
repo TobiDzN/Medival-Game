@@ -539,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1059683902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,10 +552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6467551307071024a9aba1b9904e4cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depth: 20
+  depth: 10
   width: 256
   height: 256
   scale: 20
+  textureGen: {fileID: 1059683906}
 --- !u!154 &1059683903
 TerrainCollider:
   m_ObjectHideFlags: 0
